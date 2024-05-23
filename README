@@ -19,15 +19,15 @@ The program takes command-line arguments for initial disk arm position and an op
 ## Usage
 To run the simulator, use the following command:
 
-    python3 diskSim.py <initial_position> -f <request_file>
+    ./diskSim <initial_position> -f <request_file>
 
 ### NOTE: -f <request_file> is optional.
 
 To run with a specific file:
 
-    ./dist/diskSim -42 -f test
+    ./diskSim -42 -f test
 
 To run without a file (random):
 
-    ./dist/diskSim main.py -42
+    ./diskSim -42
 
