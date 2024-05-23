@@ -1,0 +1,33 @@
+# Lab 4 - Disk Scheduling Simulator
+# Alex Zaharia
+# CSC 453 - Humer
+
+## Overview
+This Disk Scheduling Simulator is a Python application designed to simulate different disk scheduling algorithms on a model with 5000 cylinders. The simulator calculates and displays the number of tracks the disk arm will need to traverse to fulfill all track requests based on the chosen algorithm.
+
+## Features
+The program implements the following disk scheduling algorithms:
+- **FCFS (First-Come, First-Serve)**: Processes requests in the order they arrive.
+- **SSTF (Shortest Seek Time First)**: Chooses the nearest request to the current head position to minimize seek time.
+- **SCAN**: Moves the disk arm from one end of the disk to the other and back, similar to an elevator.
+- **C-SCAN (Circular SCAN)**: Similar to SCAN but the arm only moves in one direction and jumps back to the start when it reaches the end.
+- **LOOK**: Similar to SCAN but the arm reverses direction without reaching the disk ends unless necessary.
+- **C-LOOK (Circular LOOK)**: Similar to C-SCAN but only goes as far as the farthest request before reversing.
+
+The program takes command-line arguments for initial disk arm position and an optional file containing disk track requests. If no file is provided, the program generates random requests.
+
+## Usage
+To run the simulator, use the following command:
+
+    python3 diskSim.py <initial_position> -f <request_file>
+
+### NOTE: -f <request_file> is optional.
+
+To run with a specific file:
+
+    ./dist/diskSim -42 -f test
+
+To run without a file (random):
+
+    ./dist/diskSim main.py -42
+
